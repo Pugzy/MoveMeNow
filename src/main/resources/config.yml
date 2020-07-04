@@ -1,6 +1,5 @@
-message: "%kickmsg%"
-servername: "server2"
-mode: whitelist
-list:
-- ban
-- kick
+# Regex used to check for servers
+server_regex: "^lobby-(.*)"
+
+# Fallback server if above regex fails.
+server_fallback: "fallback-server"
