@@ -46,12 +46,12 @@ public class PlayerListener implements Listener {
                 .findFirst()
                 .orElse(this.plugin.getProxy().getServerInfo(plugin.getConfig().getString("server_fallback")));
 
-
         // Avoid the loop
         if (kickedFrom != null && kickedFrom.equals(kickTo)) {
             return;
         }
 
+        ev.setCancelled(true);
         ev.setCancelServer(kickTo);
     }
 }
